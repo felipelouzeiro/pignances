@@ -2,6 +2,31 @@ import { Item } from '../types';
 
 export const items: Item[] = [
   {
+    date: new Date(2022, 7, 17),
+    category: 'rent',
+    title: 'Aluguel',
+    value: 730.5,
+  },
+  {
+    date: new Date(2022, 7, 6),
+    category: 'salary',
+    title: 'Salário',
+    value: 450.0,
+  },
+  {
+    date: new Date(2022, 7, 22),
+    category: 'leisure',
+    title: 'Viajem a praia',
+    value: 80.0,
+  },
+  {
+    date: new Date(2022, 7, 22),
+    category: 'food',
+    title: 'Supermercado',
+    value: 372.2,
+  },
+
+  {
     date: new Date(2022, 8, 24),
     category: 'food',
     title: 'Supermercado',
