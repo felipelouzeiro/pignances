@@ -1,13 +1,21 @@
 import * as C from './styles';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { formatCurrentMonth } from '../../services/helpers/dateFilter';
+import { ResumeItem } from '../ResumeItem';
 
 type DashboardProps = {
   currentMonth: string;
   onMonthChange: (newMonth: string) => void;
+  income: number;
+  expense: number;
 };
 
-export const Dashboard = ({ currentMonth, onMonthChange }: DashboardProps) => {
+export const Dashboard = ({
+  currentMonth,
+  onMonthChange,
+  expense,
+  income,
+}: DashboardProps) => {
   const handlePreviewMonth = () => {
     let [year, month] = currentMonth.split('-');
 
@@ -38,7 +46,11 @@ export const Dashboard = ({ currentMonth, onMonthChange }: DashboardProps) => {
         </C.MonthArrow>
       </C.MonthContent>
 
-      <C.ResumeContent>...</C.ResumeContent>
+      <C.ResumeContent>
+        <ResumeItem title="Receitas" value={income} />
+        <ResumeItem title="Despesas" value={expense} />
+        <ResumeItem title="Balanço" value={income - expense} />
+      </C.ResumeContent>
     </C.Container>
   );
 };

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import * as C from './App.styled';
 import { Dashboard } from './components/dashboard';
 import { TableContent } from './components/TableContent';
+import { categories } from './data/categories';
 import { items } from './data/items';
 import {
   filterListByMonth,
@@ -13,13 +14,28 @@ function App() {
   const [list, setList] = useState<Item[]>(items);
   const [filteredList, setFilteredList] = useState<Item[]>([]);
   const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
+  const [income, setIncome] = useState(0);
+  const [expense, setExpense] = useState(0);
 
   useEffect(() => {
     setFilteredList(filterListByMonth(list, currentMonth));
-    console.log('list', list);
-    console.log('listFill', filteredList);
-    console.log('month', currentMonth);
   }, [list, currentMonth]);
+
+  useEffect(() => {
+    let incomeCount = 0;
+    let expenseCount = 0;
+
+    for (let index in filteredList) {
+      if (categories[filteredList[index].category].expense) {
+        expenseCount += filteredList[index].value;
+      } else {
+        incomeCount += filteredList[index].value;
+      }
+    }
+
+    setExpense(expenseCount);
+    setIncome(incomeCount);
+  }, [filteredList]);
 
   const handleMonthChange = (newMonth: string) => {
     setCurrentMonth(newMonth);
@@ -31,13 +47,12 @@ function App() {
         <C.HeaderTitle>Felinance</C.HeaderTitle>
       </C.Header>
       <C.Body>
-        {/* Exibição de dados */}
         <Dashboard
           currentMonth={currentMonth}
           onMonthChange={handleMonthChange}
+          income={income}
+          expense={expense}
         />
-
-        {/* Inserção de dados */}
 
         <TableContent list={filteredList} />
       </C.Body>
