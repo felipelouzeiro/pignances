@@ -51,3 +51,29 @@ export const formatDate = (date: Date): string => {
  * @returns string
  */
 const addZeroToDate = (n: number): string => (n < 10 ? `0${n}` : `${n}`);
+
+/**
+ * Formata a data para recebida para um formato estabelecido
+ * @param currentMonth
+ * @returns string
+ */
+export const formatCurrentMonth = (currentMonth: string): string => {
+  let [year, month] = currentMonth.split('-');
+
+  const months = [
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
+    'Agosto',
+    'Setembro',
+    'Outubro',
+    'Novembro',
+    'Dezembro',
+  ];
+
+  return `${months[parseInt(month) - 1]} de ${year}`;
+};

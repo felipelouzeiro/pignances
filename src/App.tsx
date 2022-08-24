@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import * as C from './App.styled';
+import { Dashboard } from './components/dashboard';
 import { TableContent } from './components/TableContent';
 import { items } from './data/items';
 import {
@@ -20,6 +21,10 @@ function App() {
     console.log('month', currentMonth);
   }, [list, currentMonth]);
 
+  const handleMonthChange = (newMonth: string) => {
+    setCurrentMonth(newMonth);
+  };
+
   return (
     <C.Container>
       <C.Header>
@@ -27,10 +32,13 @@ function App() {
       </C.Header>
       <C.Body>
         {/* Exibição de dados */}
+        <Dashboard
+          currentMonth={currentMonth}
+          onMonthChange={handleMonthChange}
+        />
 
         {/* Inserção de dados */}
 
-        {/* Tabela de informações */}
         <TableContent list={filteredList} />
       </C.Body>
     </C.Container>
