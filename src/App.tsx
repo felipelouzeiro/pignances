@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import * as C from './App.styled';
+import { TableContent } from './components/TableContent';
 import { items } from './data/items';
 import {
   filterListByMonth,
@@ -14,6 +15,9 @@ function App() {
 
   useEffect(() => {
     setFilteredList(filterListByMonth(list, currentMonth));
+    console.log('list', list);
+    console.log('listFill', filteredList);
+    console.log('month', currentMonth);
   }, [list, currentMonth]);
 
   return (
@@ -27,6 +31,7 @@ function App() {
         {/* Inserção de dados */}
 
         {/* Tabela de informações */}
+        <TableContent list={filteredList} />
       </C.Body>
     </C.Container>
   );

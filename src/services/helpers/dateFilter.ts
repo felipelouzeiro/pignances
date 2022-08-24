@@ -1,11 +1,21 @@
 import { Item } from '../../types';
 
+/**
+ * Retorna o mês atual
+ * @returns string
+ */
 export const getCurrentMonth = () => {
   let now = new Date();
 
-  return `${now.getFullYear()}-$${now.getMonth() + 1}`;
+  return `${now.getFullYear()}-${now.getMonth() + 1}`;
 };
 
+/**
+ * Filtra a lista recebida com base na data recebida
+ * @param list
+ * @param date
+ * @returns lista
+ */
 export const filterListByMonth = (list: Item[], date: string): Item[] => {
   let newList: Item[] = [];
   let [year, month] = date.split('-');
@@ -21,3 +31,23 @@ export const filterListByMonth = (list: Item[], date: string): Item[] => {
 
   return newList;
 };
+
+/**
+ * Formata a data recebida para um formato padrão
+ * @param date
+ * @returns string
+ */
+export const formatDate = (date: Date): string => {
+  let year = date.getFullYear();
+  let month = date.getMonth();
+  let day = date.getDay();
+
+  return `${addZeroToDate(day)}/${addZeroToDate(month)}/${year}`;
+};
+
+/**
+ * Função auxiliar que adiciona o '0' entes dos números menores que dez
+ * @param n
+ * @returns string
+ */
+const addZeroToDate = (n: number): string => (n < 10 ? `0${n}` : `${n}`);
