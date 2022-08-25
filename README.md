@@ -1,14 +1,14 @@
-<center>
+<div align="center">
 
 # PigNances 🐷
 
 Esse projeto é uma carteira de finanças pessoais, com uma listagem descritiva e amigável de receitas, despesas, detalhes dos items e um resumo mensal geral em forma de balanço. Ela foi criada com objetivo de facilitar e **incentivar** um acompanhamento financeiro de pertinho.
 
-![funcionamento]()
+![funcionamento](https://raw.githubusercontent.com/felipelouzeiro/felinance---reactJS/master/src/shared/images/screenshot.png?token=GHSAT0AAAAAABSOAYDTLSPAZVQ7UEBFNX6GYYG77WA)
 
-[Veja o app funcionando aqui!](http://felinance-react-js.vercel.app/)
+_[Veja o app funcionando aqui!](http://felinance-react-js.vercel.app/)_
 
-</center>
+</div>
 
 ---
 
@@ -41,10 +41,10 @@ Esse projeto é uma carteira de finanças pessoais, com uma listagem descritiva 
 
 #### _Adicionando item_
 
-![funcionamento](https://raw.githubusercontent.com/felipelouzeiro/felinance---reactJS/master/src/shared/images/adi%C3%A7%C3%A3o-items.gif?token=GHSAT0AAAAAABSOAYDSV3F23G57RKDXKMM6YYG7R4Q)
+![funcionamento](https://raw.githubusercontent.com/felipelouzeiro/felinance---reactJS/master/src/shared/images/adi%C3%A7%C3%A3o-items.gif?token=GHSAT0AAAAAABSOAYDSNWDIBZMDOLBRFBM2YYHAAVA)
 
 #### _Utilizando o filtro para conferir o histórico_
 
-![funcionamento](https://raw.githubusercontent.com/felipelouzeiro/felinance---reactJS/master/src/shared/images/filtro-data.gif?token=GHSAT0AAAAAABSOAYDSXACEZ64455ACCWH4YYG7SUA)
+![funcionamento](https://raw.githubusercontent.com/felipelouzeiro/felinance---reactJS/master/src/shared/images/filtro-data.gif?token=GHSAT0AAAAAABSOAYDTIMIZMDB3BEKB7BDUYYHABFA)
 
-Feito com :heart:.
+Feito com :heart: 🐷.
