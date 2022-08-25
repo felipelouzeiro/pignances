@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import * as C from './App.styled';
+import { TbPig } from 'react-icons/tb';
 import { Dashboard } from './components/dashboard';
+import { InputItem } from './components/InputItem';
 import { TableContent } from './components/TableContent';
 import { categories } from './data/categories';
 import { items } from './data/items';
@@ -41,10 +43,18 @@ function App() {
     setCurrentMonth(newMonth);
   };
 
+  const handleAddItem = (newItem: Item) => {
+    let newList = [...list];
+    newList.push(newItem);
+
+    setList(newList);
+  };
+
   return (
     <C.Container>
       <C.Header>
-        <C.HeaderTitle>Felinance</C.HeaderTitle>
+        <C.HeaderTitle>PigNances</C.HeaderTitle>
+        <TbPig />
       </C.Header>
       <C.Body>
         <Dashboard
@@ -53,7 +63,7 @@ function App() {
           income={income}
           expense={expense}
         />
-
+        <InputItem onAdd={handleAddItem} />
         <TableContent list={filteredList} />
       </C.Body>
     </C.Container>
