@@ -2,7 +2,7 @@
 
 # PigNances 🐷
 
-Esse projeto é uma carteira de finanças pessoais, com uma listagem descritiva e amigável de receitas, despesas, detalhes dos items e um resumo mensal geral em forma de balanço. Ela foi criada com objetivo de facilitar e **incentivar** um acompanhamento financeiro de pertinho.
+Carteira de finanças pessoais, com uma listagem descritiva e amigável de receitas, despesas, detalhes dos items e um resumo mensal geral em forma de balanço. Ela foi criada com objetivo de facilitar e **incentivar** um acompanhamento financeiro de pertinho.
 
 ![funcionamento](https://raw.githubusercontent.com/felipelouzeiro/felinance---reactJS/master/src/shared/images/screenshot.png?token=GHSAT0AAAAAABSOAYDTLSPAZVQ7UEBFNX6GYYG77WA)
 
@@ -47,4 +47,4 @@ _[Veja o app funcionando aqui!](http://felinance-react-js.vercel.app/)_
 
 ![funcionamento](https://raw.githubusercontent.com/felipelouzeiro/felinance---reactJS/master/src/shared/images/filtro-data.gif?token=GHSAT0AAAAAABSOAYDTIMIZMDB3BEKB7BDUYYHABFA)
 
-Feito com :heart: 🐷.
+🐷.
